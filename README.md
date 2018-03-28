@@ -1,7 +1,7 @@
 [![Linux Build Status](https://travis-ci.org/gcp/leela-zero.svg?branch=next)](https://travis-ci.org/gcp/leela-zero)
 [![Windows Build Status](https://ci.appveyor.com/api/projects/status/pf1hcgly8f1a8iu0/branch/next?svg=true)](https://ci.appveyor.com/project/gcp/leela-zero/branch/next)
 
-## What
+# What
 
 This repository is a custom version of Leela Zero for [Lizzie](https://github.com/featurecat/lizzie). If you are running Windows 64-bit, the binary has already been compiled for you [here](https://github.com/featurecat/lizzie/releases). Otherwise, you will need to compile it from this repository by following the instructions below.
 

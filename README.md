@@ -1,14 +1,9 @@
 [![Linux Build Status](https://travis-ci.org/gcp/leela-zero.svg?branch=next)](https://travis-ci.org/gcp/leela-zero)
 [![Windows Build Status](https://ci.appveyor.com/api/projects/status/pf1hcgly8f1a8iu0/branch/next?svg=true)](https://ci.appveyor.com/project/gcp/leela-zero/branch/next)
 
-## Windows
+## What
 
-Head to the Github releases page at https://github.com/featurecat/lizzie/releases,
-download the latest release, unzip, and launch Lizzie.jar.
-
-## macOS and Linux
-
-Follow the instructions below to compile the leelaz binary. Copy the leelaz binary into the Lizzie directory and launch Lizzie.jar.
+This repository is a custom version of Leela Zero for [Lizzie](https://github.com/featurecat/lizzie). If you are running Windows 64-bit, the binary has already been compiled for you [here](https://github.com/featurecat/lizzie/releases). Otherwise, you will need to compile it from this repository by following the instructions below.
 
 # Compiling
 

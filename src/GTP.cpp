@@ -47,6 +47,7 @@ using namespace Utils;
 // Configuration flags
 bool cfg_gtp_mode;
 bool cfg_allow_pondering;
+bool cfg_dump_info_while_pondering;
 int cfg_num_threads;
 int cfg_max_threads;
 int cfg_max_playouts;
@@ -76,6 +77,7 @@ bool cfg_benchmark;
 void GTP::setup_default_parameters() {
     cfg_gtp_mode = false;
     cfg_allow_pondering = true;
+    cfg_dump_info_while_pondering = false;
     cfg_max_threads = std::max(1, std::min(SMP::get_num_cpus(), MAX_CPUS));
 #ifdef USE_OPENCL
     // If we will be GPU limited, using many threads won't help much.

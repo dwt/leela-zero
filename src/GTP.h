@@ -30,6 +30,7 @@
 
 extern bool cfg_gtp_mode;
 extern bool cfg_allow_pondering;
+extern bool cfg_dump_info_while_pondering;
 extern int cfg_num_threads;
 extern int cfg_max_threads;
 extern int cfg_max_playouts;

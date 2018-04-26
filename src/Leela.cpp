@@ -82,6 +82,7 @@ static void parse_commandline(int argc, char *argv[]) {
         ("logfile,l", po::value<std::string>(), "File to log input/output to.")
         ("quiet,q", "Disable all diagnostic output.")
         ("noponder", "Disable thinking on opponent's time.")
+        ("dump-info-while-pondering", "Continuously dump ponder information for analysis tools.")
         ("benchmark", "Test network and exit. Default args:\n-v3200 --noponder "
                       "-m0 -t1 -s1.")
 #ifdef USE_OPENCL
@@ -192,6 +193,10 @@ static void parse_commandline(int argc, char *argv[]) {
 
     if (vm.count("noponder")) {
         cfg_allow_pondering = false;
+    }
+
+    if (vm.count("dump-info-while-pondering")) {
+        cfg_dump_info_while_pondering = true;
     }
 
     if (vm.count("noise")) {

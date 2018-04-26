@@ -637,14 +637,16 @@ void UCTSearch::ponder() {
         }
         keeprunning  = is_running();
         keeprunning &= !stop_thinking(0, 1);
-        Time elapsed;                                               // lizzie
-        int elapsed_centis = Time::timediff_centis(start, elapsed); // lizzie
-        if (elapsed_centis - last_update > 10) { // lizzie: output ponder data 10 times per second
-            last_update = elapsed_centis;                           // lizzie
+        if (cfg_dump_info_while_pondering) {
+            Time elapsed;                                               // lizzie
+            int elapsed_centis = Time::timediff_centis(start, elapsed); // lizzie
+            if (elapsed_centis - last_update > 10) { // lizzie: output ponder data 10 times per second
+                last_update = elapsed_centis;                           // lizzie
            
-            myprintf("~begin\n");                                   // lizzie
-            dump_stats(m_rootstate, *m_root);                       // lizzie
-            myprintf("~end\n");                                     // lizzie
+                myprintf("~begin\n");                                   // lizzie
+                dump_stats(m_rootstate, *m_root);                       // lizzie
+                myprintf("~end\n");                                     // lizzie
+            }
         }
     } while(!Utils::input_pending() && keeprunning);
 
